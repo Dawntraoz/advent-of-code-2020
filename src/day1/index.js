@@ -4,15 +4,18 @@ const solution1 = async () => {
 
   const fileInput = await readInput(__dirname);
   const arrayFileInput = fileInput.split('\n');
-  const letMeKnow = [];
+  let letMeKnow = [];
 
   arrayFileInput.map(input => {
-    if (arrayFileInput.some(comparedInput => (Number(input) + Number(comparedInput)) === 2020)) {
-      letMeKnow.push(Number(input))
-    }
+    arrayFileInput.some(input2 => {
+      if((+input + +input2) === 2020) {
+        letMeKnow = [+input, +input2]
+      }
+    })
   })
   
-  console.log(letMeKnow[0] * letMeKnow[1])
+  const result = letMeKnow.reduce((acc, i) => acc * i, 1)
+  console.log(result)
 }
 
 solution1()
@@ -25,13 +28,16 @@ const solution2 = async () => {
 
   arrayFileInput.map(input => {
     arrayFileInput.map(input2 => {
-      if (arrayFileInput.some(input3 => (Number(input) + Number(input2) + Number(input3)) === 2020)) {
-        letMeKnow.push(Number(input))
-      }
+      arrayFileInput.some(input3 => {
+        if ((+input + +input2 + +input3) === 2020) {
+          letMeKnow = [+input, +input2, +input3]
+        }
+      })
     })
   })
-  
-  console.log(letMeKnow[0] * letMeKnow[2] * letMeKnow[4])
+
+  const result = letMeKnow.reduce((acc, i) => acc * i , 1)
+  console.log(result)
 }
 
 solution2()
