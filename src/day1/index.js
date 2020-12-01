@@ -30,10 +30,8 @@ const solution2 = async () => {
       }
     })
   })
-
-  letMeKnow = letMeKnow.filter((input, index, self) => self.indexOf(input) === index)
   
-  console.log(letMeKnow[0] * letMeKnow[1] * letMeKnow[2])
+  console.log(letMeKnow[0] * letMeKnow[2] * letMeKnow[4])
 }
 
 solution2()
