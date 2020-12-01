@@ -7,18 +7,20 @@ const solution1 = async () => {
   let letMeKnow = [];
 
   arrayFileInput.map(input => {
+    if (letMeKnow.length > 0) return
+
     arrayFileInput.some(input2 => {
       if((+input + +input2) === 2020) {
         letMeKnow = [+input, +input2]
+        return
       }
     })
   })
   
-  const result = letMeKnow.reduce((acc, i) => acc * i, 1)
-  console.log(result)
+  return letMeKnow.reduce((acc, i) => acc * i, 1)
 }
 
-solution1()
+solution1().then((result) => console.log(result))
 
 const solution2 = async () => {
 
@@ -27,17 +29,21 @@ const solution2 = async () => {
   let letMeKnow = [];
 
   arrayFileInput.map(input => {
+    if (letMeKnow.length > 0) return
+
     arrayFileInput.map(input2 => {
+      if (letMeKnow.length > 0) return
+
       arrayFileInput.some(input3 => {
         if ((+input + +input2 + +input3) === 2020) {
           letMeKnow = [+input, +input2, +input3]
+          return
         }
       })
     })
   })
 
-  const result = letMeKnow.reduce((acc, i) => acc * i , 1)
-  console.log(result)
+  return letMeKnow.reduce((acc, i) => acc * i , 1)
 }
 
-solution2()
+solution2().then((result) => console.log(result))
