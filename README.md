@@ -10,22 +10,8 @@ Clone the repo and go to the created folder:
 cd advent-of-code-2020
 ```
 
-Install dependencies:
-
-```
-yarn #npm install
-```
-
 ## Running dev mode
 
 ```
-yarn start day<N> #npm start day<N>
+yarn start
 ```
-
-Example:
-
-```
-yarn start day1
-```
-
-If the day folder does not exist, it will be created from template.
