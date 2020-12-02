@@ -1,4 +1,4 @@
-9-10 m: mmmmnxmmmwm
+export const inputDay2 = `9-10 m: mmmmnxmmmwm
 6-8 w: wpwwhxnv
 4-6 n: trwpnnnvq
 12-15 p: zfpmpphpgghpppppppp
@@ -997,4 +997,4 @@
 11-17 z: hwzdfvbpbxzfpjwmzq
 1-11 m: mxkmnxfbtnmvmtzdqjl
 3-4 d: ddjg
-17-18 b: jnlntbblbbqbkqmbbb
+17-18 b: jnlntbblbbqbkqmbbb`

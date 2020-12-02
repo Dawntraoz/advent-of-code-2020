@@ -2,16 +2,30 @@
 
 This repo contains my solutions for [Advent of Code](https://adventofcode.com/2020) challenges.
 
-## Installation
-
-Clone the repo and go to the created folder:
+## Project setup
 
 ```
-cd advent-of-code-2020
+yarn install
 ```
 
-## Running dev mode
+### Compiles and hot-reloads for development
 
 ```
-yarn start
+yarn serve
 ```
+
+### Compiles and minifies for production
+
+```
+yarn build
+```
+
+### Lints and fixes files
+
+```
+yarn lint
+```
+
+### Customize configuration
+
+See [Configuration Reference](https://cli.vuejs.org/config/).
