@@ -27,9 +27,6 @@ export default {
     }
   },
   methods: {
-    createMap(arrayPattern, times) {
-      return arrayPattern.map(input => input.repeat(times))
-    },
     getTrees(right, bottom) {
       const arrayFileInput = this.fileInput.split('\n');
 
