@@ -15,21 +15,23 @@
 </template>
 
 <script>
-import { day1, day2, day3 } from './components'
+import { day1, day2, day3, day4 } from './components'
 
 export default {
   name: 'App',
   components: {
     day1,
     day2,
-    day3
+    day3,
+    day4
   },
   data() {
     return {
       solutions: [
         'day1',
         'day2',
-        'day3'
+        'day3',
+        'day4'
       ]
     }
   }
