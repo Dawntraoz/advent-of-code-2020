@@ -32,10 +32,9 @@ export default {
       const passports = this.fileInput.split('\n\n');
       
       const validPassports = passports.filter(passport => {
-        const arrayPassport = passport.split('\n').join(' ').split(' ')
+        const arrayPassport = passport.split(/\s/)
         const passportFields = arrayPassport.map(i => i.split(':')[0])
-        const success = fields.every(val => passportFields.includes(val))
-        return success
+        return fields.every(val => passportFields.includes(val))
       })
       
       this.result1 = validPassports.length
@@ -53,14 +52,15 @@ export default {
       const passports = this.fileInput.split('\n\n');
       
       const validPassports = passports.filter(passport => {
-        const arrayPassport = passport.split('\n').join(' ').split(' ')
-        const passportFields = arrayPassport.map(i => i.split(':')[0])
+        const arrayPassport = passport.split(/\s/)
         const validationSuccess = arrayPassport.every(pass => {
           const [ key, val ] = pass.split(':')
           if ((validation[key] && (val.match(new RegExp(validation[key], 'g')) || []).length) || key === 'cid') return true
         })
+
         if (!validationSuccess) return false
         
+        const passportFields = arrayPassport.map(i => i.split(':')[0])
         return Object.keys(validation).every(val => passportFields.includes(val))
       })
       
