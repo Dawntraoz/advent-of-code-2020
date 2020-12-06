@@ -31,7 +31,7 @@ export default {
       let row = [0, 127];
       let column = [0, 7];
 
-      for (var i = 0; i< seat.length; i++) {
+      for (let i = 0; i< seat.length; i++) {
         switch (seat.charAt(i)) {
           case 'F':
             row = (row[1] - row[0] === 1) ? row[0] : [row[0], row[0] + Math.floor((row[1] - row[0])/2)]

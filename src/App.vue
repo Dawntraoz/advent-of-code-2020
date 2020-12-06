@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { day1, day2, day3, day4, day5 } from './components'
+import { day1, day2, day3, day4, day5, day6 } from './components'
 
 export default {
   name: 'App',
@@ -24,7 +24,8 @@ export default {
     day2,
     day3,
     day4,
-    day5
+    day5,
+    day6
   },
   data() {
     return {
@@ -33,7 +34,8 @@ export default {
         'day2',
         'day3',
         'day4',
-        'day5'
+        'day5',
+        'day6'
       ]
     }
   }
