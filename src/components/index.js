@@ -6,6 +6,7 @@ import day5 from './day5.vue'
 import day6 from './day6.vue'
 import day7 from './day7.vue'
 import day8 from './day8.vue'
+import day9 from './day9.vue'
 
 export {
   day1,
@@ -15,5 +16,6 @@ export {
   day5,
   day6,
   day7,
-  day8
+  day8,
+  day9
 }
